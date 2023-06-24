@@ -1,0 +1,32 @@
+package pagetesting;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PhpTravels {
+
+	public static void main(String[] args) {
+		WebDriver wb = new ChromeDriver();
+		wb.get("https://phptravels.com/demo/");
+		wb.manage().window().maximize();
+		wb.findElement(( By.xpath("//input[@type='text' and @placeholder='First Name']"))).sendKeys("devi");
+		wb.findElement(By.xpath("//input[@type='text' and @placeholder='Last Name']")).sendKeys("dinesh");
+		wb.findElement(By.xpath("//input[@type='text' and @placeholder='Business Name']")).sendKeys("tech dev");
+		wb.findElement(By.xpath("//input[@type='email' and @placeholder='Email']")).sendKeys("devidinesh09@gmail.com");
+		wb.findElement(By.xpath("//input[@type='text' and @placeholder='Result ?']")).sendKeys("12");
+		wb.findElement(By.xpath("//*[text()='Submit']")).click();
+		
+		//input[@type='text' and @placeholder='Business Name']
+		//input[@type='email' and @placeholder='Email']
+		//input[@type='text' and @placeholder='Result ?']
+		//*[text()='Submit']
+  
+       
+
+	}
+
+}

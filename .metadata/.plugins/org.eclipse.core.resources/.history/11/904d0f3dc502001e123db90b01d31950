@@ -1,0 +1,25 @@
+package pagetesting;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PhpTravels {
+
+	public static void main(String[] args) {
+		WebDriver wb = new ChromeDriver();
+		wb.get("https://phptravels.com/demo/");
+
+          wb.findElement(By.xpath("//input[@type=\"text\" and @name=\"first_name\"]")).sendKeys("amala");
+          wb.findElement(By.xpath("//input[@type=\"last_name\"]")).sendKeys("ram");
+          wb.findElement(By.xpath("//input[@type=\"email\"]//following::input")).sendKeys("");
+        		
+  
+       
+
+	}
+
+}

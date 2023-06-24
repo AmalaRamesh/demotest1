@@ -1,0 +1,28 @@
+package pagetesting;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PhpTravels {
+
+	public static void main(String[] args) {
+		WebDriver wb = new ChromeDriver();
+		wb.get("https://phptravels.com/demo/");
+        WebElement driver1 = wb.findElement(By.xpath("//a[@class=\"link btn-outline-white btn waves-effect\"]"));
+        driver1.click();
+        wb.findElement(By.xpath("//input[@id=\"inputEmail\"]")).sendKeys("amalaramesh17@gmail.com");
+//        WebElement email = wb.findElement(By.name("\"username\"")) .sendKeys("amalaramesh17@gmail.com");
+        wb.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("ram");
+        wb.findElement(By.xpath("//div[@class=\"input-group-prepend\"]/span")).sendKeys("amala@gmail.com");
+        		
+       
+       
+//        WebElement driver3 = wb.findElement(By.xpath("//button[@class=\"btn btn-primary btn-recaptcha\"]"));
+//        driver3.click();
+	}
+
+}

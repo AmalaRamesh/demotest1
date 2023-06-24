@@ -1,0 +1,77 @@
+package testing;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Demo1test {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver wb= new ChromeDriver();
+	    wb.manage().window().maximize();
+	    
+		wb.get("https://trytestingthis.netlify.app/");
+		WebElement searchBox = wb.findElement(By.name("q"));
+		List<WebElement>options = wb.findElements(By.name("Optionwithcheck[]"));
+		  
+		  for(WebElement element : options) {
+		   System.out.println(element.getText());
+		  }
+
+		
+		
+		
+		
+		
+	}
+
+}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		wb.findElement(By.xpath("//a[@class='_1_3w1N']")).click();
+////		WebDriverWait wait= new WebDriverWait(wb,10);
+////		Thread.sleep(1000);
+////		WebDriverWait wait = new WebDriverWait(wb, 40);
+////		wb.findElement(By.xpath("//input[@class=\"_2IX_2- VJZDxU\"]")).sendKeys("amalaramesh08@gmail.com");
+//		
+		
+		
+
+

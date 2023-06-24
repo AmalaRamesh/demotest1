@@ -1,0 +1,21 @@
+package pagetesting;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Amazontesting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver =new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		driver.findElement(By.xpath("//a[@id='nav-link-accountList']")).click();
+		driver.findElement(By.xpath("//*[@id=\"nav-al-signin\"]")).click();
+		driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("7373832295");
+		driver.findElement(By.xpath("//input[@id='continue']")).click();
+		//input[@id='ap_email']
+		//input[@id='continue']
+	}
+
+}
